@@ -14,4 +14,5 @@ if ((!$conn_id) || (!$login_result)) {
 
 // turn on passive mode transfers
 ftp_pasv ($conn_id, true);
+
 ?>
