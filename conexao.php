@@ -9,10 +9,9 @@ $login_result = ftp_login ($conn_id, "raildo.barros@gmail.com", "29069218raildo"
 if ((!$conn_id) || (!$login_result)) { 
         echo "Ftp-connect Falhou!"; die; 
     } else {
-        echo "Conectado.";
+        //echo "Conectado.";
     }
 
 // turn on passive mode transfers
 ftp_pasv ($conn_id, true);
-
 ?>

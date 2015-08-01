@@ -7,39 +7,34 @@
         <title></title>
     </head>
     <body>
-        <audio 
-            src="http://web.htmhelen.com/music/Quermesse.mp3" 
-            controls="controls" loop preload="preload" 
-            title="Quermesse - O Teatro Mágico"> 
-            <a href="http://web.htmhelen.com/music/Quermesse.mp3">
-                Quermesse - O Teatro Mágico.mp3
-            </a> 
-        </audio>
         <?php
-        echo "Diretório atual: " . ftp_pwd($conn_id) . "\n";
-
         // tenta mudar para algumDiretorio
         if (ftp_chdir($conn_id, "Pregações")) {
-            echo "O diretório atual agora é: " . ftp_pwd($conn_id) . "\n";
+            //echo "O diretório atual agora é: " . ftp_pwd($conn_id) . "\n";
         } else {
             echo "Não foi possível mudar o diretório\n";
         }
 
-        // get contents of the current directory
+        //Pega o conteúdo do diretório atual
         $contents = ftp_nlist($conn_id, ".");
 
-        // output $contents
-        var_dump($contents);
-        var_dump($contents[0]);
         ?>
+        <?php
+        foreach ($contents as $nomedoarquivo) {   
+            echo $nomedoarquivo;
+        ?>
+        <br>
         <audio 
-            src="ftp://ftp.4shared.com/Pregações/<?php echo $contents[0] ?>" 
+            src="ftp://raildo.barros@gmail.com:29069218raildo@ftp.4shared.com/Pregações/<?php echo $nomedoarquivo; ?>" 
             controls="controls" loop preload="preload" 
             title="Quermesse - O Teatro Mágico"> 
-            <a href="ftp://ftp.4shared.com/Pregações/<?php echo $contents[0] ?>">
-                Quermesse - O Teatro Mágico.mp3
+            <a href="<?php echo $contents[0] ?>">
+                <?php echo $contents[0] ?>
             </a> 
         </audio>
-        
+        <br>
+        <?php
+        }
+        ?>
     </body>
 </html>
