@@ -20,6 +20,12 @@ include './id3.class.php';
 
         //Pega o conteúdo do diretório atual
         $contents = ftp_nlist($conn_id, ".");
+
+        $file = fopen("ftp://raildo.barros@gmail.com:29069218raildo@ftp.4shared.com/Pregações/" . $contents[0], "r");
+        if (!$file) {
+            echo "<p>Incapaz de abrir arquivo remoto.\n";
+            exit;
+        }
         ?>
 
 
@@ -27,8 +33,8 @@ include './id3.class.php';
         <?php
         foreach ($contents as $nomedoarquivo) {
             echo "O diretório atual agora é: " . ftp_pwd($conn_id) . "\n";
-            
-            $arquivo = $nomedoarquivo;
+
+            $arquivo = 'ftp://raildo.barros@gmail.com:29069218raildo@ftp.4shared.com/Pregações/' . $nomedoarquivo;
             require('error.inc.php');
             $myId3 = new ID3($arquivo);
             if ($myId3->getInfo()) {
