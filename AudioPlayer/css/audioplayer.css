@@ -1,23 +1,23 @@
 .audioplayer
 {
-	height: 2.5em; /* 40 */
+	height: 3.5em; /* 40 */
 	color: #fff;
 	text-shadow: 1px 1px 0 #000;
 	//border: 1px solid #222;
 	position: relative;
 	z-index: 1;
-	background: #ccc;
-	background: -webkit-gradient( linear, left top, left bottom, from( #ccc ), to( #ccc ) );
-	background: -webkit-linear-gradient( top, #ccc, #ccc );
-	background: -moz-linear-gradient( top, #ccc, #ccc );
-	background: -ms-radial-gradient( top, #ccc, #ccc );
-	background: -o-linear-gradient( top, #ccc, #ccc );
-	background: linear-gradient( top, #ccc, #ccc );
-	-webkit-box-shadow: inset 0 1px 0 rgba( 255, 255, 255, .15 ), 0 0 1.25em rgba( 0, 0, 0, .5 ); /* 20 */
-	-moz-box-shadow: inset 0 1px 0 rgba( 255, 255, 255, .15 ), 0 0 1.25em rgba( 0, 0, 0, .5 ); /* 20 */
-	box-shadow: inset 0 1px 0 rgba( 255, 255, 255, .15 ), 0 0 1.25em rgba( 0, 0, 0, .5 ); /* 20 */
-	-webkit-border-radius: 2px;
-	-moz-border-radius: 2px;
+	background: #F2F2F2;
+	background: -webkit-gradient( linear, left top, left bottom, from( #BDBDBD ), to( #BDBDBD ) );
+	background: -webkit-linear-gradient( top, #BDBDBD, #BDBDBD );
+	background: -moz-linear-gradient( top, #BDBDBD, #BDBDBD );
+	background: -ms-radial-gradient( top, #BDBDBD, #BDBDBD );
+	background: -o-linear-gradient( top, #BDBDBD, #BDBDBD );
+	background: linear-gradient( top, #BDBDBD, #BDBDBD );
+	//-webkit-box-shadow: inset 0 1px 0 rgba( 255, 255, 255, .15 ), 0 0 1.25em rgba( 0, 0, 0, .5 ); /* 20 */
+	//-moz-box-shadow: inset 0 1px 0 rgba( 255, 255, 255, .15 ), 0 0 1.25em rgba( 0, 0, 0, .5 ); /* 20 */
+	//box-shadow: inset 0 1px 0 rgba( 255, 255, 255, .15 ), 0 0 1.25em rgba( 0, 0, 0, .5 ); /* 20 */
+	//-webkit-border-radius: 2px;
+	//-moz-border-radius: 2px;
 	border-radius: 2px;
 }
 	.audioplayer-mini
@@ -104,6 +104,7 @@
 		height: 100%;
 		line-height: 2.375em; /* 38 */
 		text-align: center;
+                line-height: 350%;
 		z-index: 2;
 		top: 0;
 	}
