@@ -1,6 +1,6 @@
 <?php
-$login = "nazarenororaima@gmail.com";
-$senha = "nazareno2015!@";
+$login = "";
+$senha = "";
 $link = "https://www.4shared.com/mp3/g5Ppq-Coce/01_270715_Destronando_Mamom_-_.html?";
 $destronandoMamon = "https://www.4shared.com/folder/4U7TDJfB/Destronando_Mamom.html";
 
