@@ -24,10 +24,10 @@ try {
 echo $id;
 
 $pegarItens = $a->getItems($login, $senha, $idDestronandoMamon);
-var_dump($pegarItens);
+//var_dump($pegarItens);
 echo '-----------------------------------------------------------------------------------------------------------------------';
 $mp3Infos = $a->getMp3FileInfos($login, $senha, $idDestronandoMamon);
-var_dump($mp3Infos);
+//var_dump($mp3Infos);
 
 for ($i = 0; $i < count($pegarItens->item); $i++) {
     $linkPageDownload = $pegarItens->item[$i]->downloadLink;
@@ -38,8 +38,8 @@ for ($i = 0; $i < count($pegarItens->item); $i++) {
     $mp3Info = $mp3Infos->item[$i]->title;
     $nomeDoAudio = $pegarItens->item[$i]->name;
     echo '<h1>' . $mp3Info . '</h1>';
-    echo '<a href="' . $linkPageDownload . '"> Link indireto: ' . $nomeDoAudio . '</a></br>';
-    //echo '<a href="' . $linkPageDownload . '"> Link direto' . $nomeDoAudio . '</a></br>';
+    echo '<a href="' . $linkPageDownload . '"> Link indireto: ' . $linkPageDownload . '</a></br>';
+    echo '<a href="' . $linkPageDownload . '"> Link direto: ' . $nomeDoAudio . '</a></br>';
 }
 
 
